@@ -45,7 +45,7 @@ void T4(void *data)
 int var=10;
 while(1)
 {
-		xQueueSend(xQueue1,&var,0);
+		xQueueSend(Queue1,&var,0);
 		vTaskDelay(3000/portTICK_PERIOD_MS);
 }
 }
@@ -57,7 +57,7 @@ while(1)
 
 
  		int buff;
- 		xQueueReceive(xQueue1,&buff,0);
+ 		xQueueReceive(Queue1,&buff,0);
  		
  			printf("In Task 5 received message from Task 4 is %d\n",buff);
  		vTaskDelay(3000/portTICK_PERIOD_MS);
