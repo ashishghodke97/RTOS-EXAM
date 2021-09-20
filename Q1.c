@@ -70,5 +70,5 @@ void app_main(void)
 		xTaskCreate(T3,"Task_3",2048,NULL,5,NULL);
 		xTaskCreate(T4,"Task_4",2048,NULL,3,NULL);
 		xTaskCreate(T5,"Task_5",2048,NULL,1,NULL);
-		xQueue1= xQueueCreate(3,sizeof(int));
+		Queue1= xQueueCreate(3,sizeof(int));
 	}
